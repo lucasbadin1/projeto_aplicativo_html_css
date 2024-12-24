@@ -1,0 +1,110 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62, 5%;
+}
+
+body {
+    margin-top: 1rem;
+    font-family: "Roboto";
+    font-size: 1.6rem;
+    color: black;
+}
+
+
+
+    .container {
+        display: grid;
+        grid-template-areas:
+            ". . . conteudo . "
+            ". imagem imagem conteudo . "
+            ". rodape rodape rodape . "
+        ;
+        gap: 5rem;
+    }
+
+
+
+
+header {
+    grid-area: imagem;
+    margin-bottom: 3rem;
+    width: auto;
+    height: auto;
+}
+
+main {
+    grid-area: conteudo;
+    width: auto;
+    height: auto;
+    border: 0.1rem solid rgb(0, 0, 0, 0.15);
+}
+
+footer {
+    grid-area: rodape;
+}
+
+header h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 3.2rem;
+    font-weight: 50rem;
+    line-height: 10rem;
+}
+
+span {
+    color: rgb(55, 179, 55);
+}
+
+main h2 {
+    max-width: 43rem;
+    font-size: 3.6rem;
+    font-family: 'Roboto';
+    font-weight: 50rem;
+    margin-left: 4rem;
+    margin-top: 1rem;
+}
+
+main .action a {
+    background-color: rgb(253, 238, 238);
+    padding: 4.4rem 5.7rem;
+    margin-top: 5.4rem;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    font-size: 2.4rem;
+    text-decoration: none;
+    color: black;
+    border-radius: 1.2rem;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+main .action a+a {
+    background-color: rgb(55, 179, 55);
+    color: aliceblue;
+}
+
+main, main .action {
+    display: flex;
+    flex-direction: column;
+}
+
+
+footer p {
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+footer a {
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    font-size: 1.8rem;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    font-weight: bolder;
+}

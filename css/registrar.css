@@ -1,0 +1,130 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62, 5%;
+    --padrao-border: 0.1rem solid rgb(0, 0, 0, 0.15);
+}
+
+body {
+    margin-top: 1rem;
+    font-family: "Roboto";
+    font-size: 1.6rem;
+    color: black;
+}
+
+
+.container {
+        display: grid;
+        grid-template-areas:
+            ". . . conteudo . "
+            ". imagem imagem conteudo . "
+            ". rodape rodape rodape . "
+        ;
+        gap: 5rem;
+    }
+
+
+
+header {
+    grid-area: imagem;
+    margin-bottom: 3rem;
+}
+
+main {
+    grid-area: conteudo;
+    width: auto;
+    height: auto;
+    border: var(--padrao-border);
+}
+
+footer {
+    grid-area: rodape;
+}
+
+header h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 3.2rem;
+    font-weight: 50rem;
+    line-height: 10rem;
+}
+
+span {
+    color: rgb(55, 179, 55);
+}
+
+main h2 {
+    max-width: 43rem;
+    font-size: 3.6rem;
+    font-family: 'Roboto';
+    font-weight: 50rem;
+    margin-left: 4rem;
+    margin-top: 1rem;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+    margin-left: 4rem;
+    margin-top: 3rem;
+}
+
+input, select {
+    width: 50rem;
+    height: 5.5rem;
+    background-color: white;
+    border: var(--padrao-border);
+    border-radius: 1.2rem;
+    margin-right: 2rem;
+    font-family: "Roboto";
+    font-size: 1.6rem;
+    color: rgb(117, 114, 114);
+}
+
+label {
+    font-size: 1.8rem;
+    font-weight: 40rem;
+    text-transform: lowercase;
+    margin-bottom: 0.5rem;
+}
+
+div button {
+    margin-top: 3rem;
+    margin-left: 4rem;
+    margin-right: 6rem;
+    font-size: 2.4rem;
+    text-decoration: none;
+    border-radius: 1.2rem;
+    text-align: center;
+    padding: 1rem;
+    background-color: rgb(55, 179, 55);
+    color: aliceblue;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: .6;
+    }
+} 
+
+div button:hover {
+    animation: pulse 1s infinite;
+}
+
+footer a {
+    font-size: 1.8rem;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    font-weight: bolder;
+}
+
